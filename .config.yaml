@@ -14,7 +14,7 @@ repos:
       .: excluded
 
   poky:
-    url: "https://git://git.yoctoproject.org/poky"
+    url: "https://git.yoctoproject.org/poky"
     branch: mickledore
     layers:
       meta:
