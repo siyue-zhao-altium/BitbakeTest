@@ -13,6 +13,12 @@ repos:
     layers:
       .: excluded
 
+  openembedded-core:
+    url: https://github.com/openembedded/openembedded-core.git
+    ref: dunfell
+    layers:
+      meta:
+  
   meta-test:
     layers:
       meta-test:
