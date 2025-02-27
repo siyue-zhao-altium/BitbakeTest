@@ -13,11 +13,13 @@ repos:
     layers:
       .: excluded
 
-  openembedded-core:
-    url: https://github.com/openembedded/openembedded-core.git
-    ref: dunfell
+  poky:
+    url: "https://git.yoctoproject.org/poky"
+    branch: mickledore
     layers:
       meta:
+      meta-poky:
+      meta-yocto-bsp:
   
   meta-test:
     layers:
