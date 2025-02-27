@@ -26,6 +26,76 @@ repos:
       meta-test:
 
 local_conf_header:
+  standard: |
+    DISTRO_FEATURES:remove = "x11 wayland opengl"
+    BB_NUMBER_THREADS = "8"
+    PARALLEL_MAKE = "-j8"
+
+    PACKAGE_CLASSES ?= "package_ipk"
+    IMAGE_FEATURES:remove = "package-management"
+
+    do_package_write_rpm[noexec] = "1"
+    do_package_write_ipk[noexec] = "1"
+    do_package_write_deb[noexec] = "1"
+
+
+    BBMASK += "meta/recipes-devtools/gcc"
+    BBMASK += "meta/recipes-core/glibc"
+    BBMASK += "meta/recipes-support/libmicrohttpd/ \
+              meta/recipes-devtools/perl/ \
+              meta/recipes-core/util-linux-native/"
+
+    PACKAGE_EXCLUDE += "opkg-utils-native"
+    ASSUME_PROVIDED += "opkg-utils-native"
+
+    PACKAGE_EXCLUDE += "rpm-native"
+    ASSUME_PROVIDED += "rpm-native"
+
+    PACKAGE_EXCLUDE += "python3-native"
+    ASSUME_PROVIDED += "python3-native"
+
+    PACKAGE_EXCLUDE += "dwarfsrcfiles-native"
+    ASSUME_PROVIDED += "dwarfsrcfiles-native"
+
+    PACKAGE_EXCLUDE += "elfutils-native"
+    ASSUME_PROVIDED += "elfutils-native"
+
+    PACKAGE_EXCLUDE += "perl-native libmicrohttpd-native"
+    ASSUME_PROVIDED += "perl-native libmicrohttpd-native"
+
+    PACKAGE_EXCLUDE += "gcc gcc-runtime libgcc glibc virtual/libc glibc-utils glibc-thread-db glibc-mtrace glibc-locale glibc-gconv glibc-dev glibc-staticdev glibc-misc glibc-testsuite"
+    #PACKAGE_EXCLUDE += "zstd-native libtool-native libmicrohttpd perl-native util-linux-native openssl curl python3 elfutils-native dwarfsrcfiles-native"
+    #PACKAGE_EXCLUDE += "createrepo-c-native curl-native ldconfig-native nativesdk-glibc-locale cross-localedef-native gcc-runtime gcc-cross-x86_64 libgcc-initial gcc-source-12.3.0 libgcc"
+    #PACKAGE_EXCLUDE += "pkgconfig-native"
+
+
+    EXTRA_IMAGE_FEATURES:remove = "gcc-runtime dev-pkgs"
+
+    #PACKAGE_EXCLUDE = "buildtools-tarball meta-extsdk-toolchain"
+    #ASSUME_PROVIDED += "buildtools-tarball meta-extsdk-toolchain"
+    PREFERRED_PROVIDER_gnutls-native = ""
+
+    #ASSUME_PROVIDED += "zstd-native libtool-native gcc-runtime createrepo-c-native curl-native ldconfig-native nativesdk-glibc-locale cross-localedef-native"
+    #ASSUME_PROVIDED += "libmicrohttpd perl-native util-linux-native openssl curl python3 elfutils-native dwarfsrcfiles-native"
+    #ASSUME_PROVIDED += "pkgconfig-native"
+
+    PREFERRED_PROVIDER_virtual/x86_64-poky-linux-gcc = "dummy-gcc"
+    PREFERRED_PROVIDER_virtual/kernel = "linux-dummy"
+    PREFERRED_PROVIDER_virtual/gcc = "dummy-gcc"
+    PREFERRED_PROVIDER_virtual/compilerlibs = "dummy-compilerlibs"
+    PREFERRED_PROVIDER_virtual/libc = "dummy-libc"
+    PREFERRED_PROVIDER_virtual/compiler = ""
+    PREFERRED_PROVIDER_virtual/libgcc = ""
+    PREFERRED_PROVIDER_virtual/libc-initial = ""
+    PREFERRED_PROVIDER_virtual/libgcc = ""
+    PREFERRED_PROVIDER_virtual/libstdc++ = ""
+    PREFERRED_PROVIDER_python3-native = "python3-dummy"
+
+    DISTRO_FEATURES:remove = "glibc gnutls"
+
+    PACKAGE_EXCLUDE = "gcc-runtime"
+
+    SKIP_FILEDEPS = "1"
   meta-test: |
     # Some useful lines you may want to copy to your site.conf for development
     # INHERIT += "rm_work"
