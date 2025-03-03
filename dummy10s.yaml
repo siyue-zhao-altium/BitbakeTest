@@ -27,3 +27,5 @@ repos:
 
 local_conf_header:
   standard: |
+    INHERIT += "sanity"
+    CONF_SANITY_SKIP += "TUNE_ARCH PACKAGE_ARCHS"
