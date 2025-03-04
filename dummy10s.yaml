@@ -18,7 +18,6 @@ repos:
     branch: kirkstone
     layers:
       meta:
-      oe-init-build-env:
 
   meta-test:
     layers:
