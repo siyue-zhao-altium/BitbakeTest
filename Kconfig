@@ -1,32 +1,24 @@
 mainmenu "Image Builder"
 
-config KAS_BUILD_SYSTEM
-	string
-	default "openembedded"
-
 menu "Selection"
 choice
-	prompt "Select the Yocto version to use"
-	default YOCTO_SCARTHGAP
+	prompt "Select the Image builder you want to use"
+	default HELLO_WORLD
 
-	config YOCTO_KIRKSTONE
-	bool "Yocto Kirkstone"
-	help
-		Select Yocto Kirkstone
+	config HELLO_WORLD
+	bool "Hello world takes 5 mins"
 
-	config KAS_INCLUDE_YOCTO_KIRKSTONE
+	config KAS_INCLUDE_HELLOWORLD
 	string
-	depends on YOCTO_KIRKSTONE
-	default "kas/yocto/kirkstone.yml"
+	depends on HELLO_WORLD
+	default "helloWorld5min.yaml"
 
-	config YOCTO_SCARTHGAP
-	bool "Yocto Scarthgap"
-	help
-		Select Yocto Scarthgap
+	config DUMMY_FAST
+	bool "Dummy image takes 10s to build"
 
-	config KAS_INCLUDE_YOCTO_SCARTHGAP
+	config KAS_INCLUDE_DUMMY_FAST
 	string
-	depends on YOCTO_SCARTHGAP
-	default "kas/yocto/scarthgap.yml"
+	depends on DUMMY_FAST
+	default "dummy10s.yaml"
 endchoice
 endmenu
