@@ -18,6 +18,7 @@ repos:
     branch: kirkstone
     layers:
       meta:
+      meta-poky:
       oe-init-build-env:
 
   meta-test:
