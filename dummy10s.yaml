@@ -26,3 +26,4 @@ repos:
 local_conf_header:
   standard: |
     INHERIT:remove = "sanity"
+    INHERIT:remove = "uninative"
