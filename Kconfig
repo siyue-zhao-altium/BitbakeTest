@@ -23,21 +23,16 @@ choice
 endchoice
 endmenu
 
-menu "Set a string"
-	config SET_STRING
-	bool "Set value for a string"
-	default n
-	help
-		Set the machine that the SDK is built to be installed on.
-		Available options provided by OpenEmbedded-Core are: aarch64,
-		i586, i686, ppc64, ppc64le, and x86_64.
 
-	config STRING
-	depends on SET_STRING
-	string "STRING"
-	default "jay test"
-	help
-		Set the machine that the SDK is built to be installed on.
-		Available options provided by OpenEmbedded-Core are: aarch64,
-		i586, i686, ppc64, ppc64le, and x86_64.
-endmenu
+config SET_PACKAGE_CLASSES
+string "STRING"
+default "package_ipk"
+help
+	Set the PACKAGE_CLASSES: package_ipk, package_deb, package_rpm.
+
+
+config SET_BB_NUMBER_THREADS
+string "STRING"
+default "4"
+help
+	Set the BB_NUMBER_THREADS: 4, 8.

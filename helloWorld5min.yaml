@@ -64,20 +64,8 @@ local_conf_header:
     ASSUME_PROVIDED += "perl-native libmicrohttpd-native"
 
     PACKAGE_EXCLUDE += "gcc gcc-runtime libgcc glibc virtual/libc glibc-utils glibc-thread-db glibc-mtrace glibc-locale glibc-gconv glibc-dev glibc-staticdev glibc-misc glibc-testsuite"
-    #PACKAGE_EXCLUDE += "zstd-native libtool-native libmicrohttpd perl-native util-linux-native openssl curl python3 elfutils-native dwarfsrcfiles-native"
-    #PACKAGE_EXCLUDE += "createrepo-c-native curl-native ldconfig-native nativesdk-glibc-locale cross-localedef-native gcc-runtime gcc-cross-x86_64 libgcc-initial gcc-source-12.3.0 libgcc"
-    #PACKAGE_EXCLUDE += "pkgconfig-native"
-
-
     EXTRA_IMAGE_FEATURES:remove = "gcc-runtime dev-pkgs"
-
-    #PACKAGE_EXCLUDE = "buildtools-tarball meta-extsdk-toolchain"
-    #ASSUME_PROVIDED += "buildtools-tarball meta-extsdk-toolchain"
     PREFERRED_PROVIDER_gnutls-native = ""
-
-    #ASSUME_PROVIDED += "zstd-native libtool-native gcc-runtime createrepo-c-native curl-native ldconfig-native nativesdk-glibc-locale cross-localedef-native"
-    #ASSUME_PROVIDED += "libmicrohttpd perl-native util-linux-native openssl curl python3 elfutils-native dwarfsrcfiles-native"
-    #ASSUME_PROVIDED += "pkgconfig-native"
 
     PREFERRED_PROVIDER_virtual/x86_64-poky-linux-gcc = "dummy-gcc"
     PREFERRED_PROVIDER_virtual/kernel = "linux-dummy"
