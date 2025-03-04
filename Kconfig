@@ -24,11 +24,11 @@ endchoice
 endmenu
 
 
-config PACKAGE_CLASSES
-string "SET PACKAGE_CLASSES"
-default "package_ipk"
+config HELLO_MESSAGE
+string "SET HELLO_MESSAGE"
+default "Hello World from Jay 001"
 help
-	Set the PACKAGE_CLASSES: package_ipk, package_deb, package_rpm.
+	Set the HELLO_MESSAGE: Anything.
 
 
 config BB_NUMBER_THREADS
