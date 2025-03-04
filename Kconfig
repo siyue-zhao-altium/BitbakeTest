@@ -24,27 +24,15 @@ endchoice
 endmenu
 
 
-config SET_PACKAGE_CLASSES
-string "SET_PACKAGE_CLASSES"
+config PACKAGE_CLASSES
+string "SET PACKAGE_CLASSES"
 default "package_ipk"
 help
 	Set the PACKAGE_CLASSES: package_ipk, package_deb, package_rpm.
 
 
-config SET_BB_NUMBER_THREADS
-string "SET_BB_NUMBER_THREADS"
-default "4"
-help
-	Set the BB_NUMBER_THREADS: 4, 8.
-
-config SET_FOO
-string "SET_FOO"
-default "4"
-help
-	Set the BB_NUMBER_THREADS: 4, 8.
-
-config FOO_MAGIC
-string "FOO_MAGIC"
+config BB_NUMBER_THREADS
+string "SET BB_NUMBER_THREADS"
 default "4"
 help
 	Set the BB_NUMBER_THREADS: 4, 8.
