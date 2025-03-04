@@ -3,6 +3,7 @@
 # This recipe is a simplified form of core-image-minimal.
 
 SUMMARY = "A simple, minimal image"
+LICENSE = "CLOSED"
 
 IMAGE_INSTALL = ""
 
