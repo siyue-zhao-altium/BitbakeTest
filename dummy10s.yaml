@@ -12,14 +12,6 @@ repos:
     branch: "2.0"
     layers:
       .: excluded
-
-  poky:
-    url: "https://git.yoctoproject.org/poky"
-    branch: mickledore
-    layers:
-      meta:
-      meta-poky:
-      meta-yocto-bsp:
   
   meta-test:
     layers:
