@@ -8,6 +8,7 @@ SRC_URI = "file://helloworld.txt"
 S = "${WORKDIR}"
 
 do_install() {
+    install -d ${D}${bindir} 
     echo "${HELLO_MESSAGE}" > ${D}${bindir}/helloworld.txt
 }
 
