@@ -12,7 +12,13 @@ repos:
     branch: "2.0"
     layers:
       .: excluded
-  
+    
+  openembedded-core:
+    url: "https://git.openembedded.org/openembedded-core"
+    branch: kirkstone
+    layers:
+      meta:
+
   meta-test:
     layers:
       meta-test:
