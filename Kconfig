@@ -22,3 +22,22 @@ choice
 	default "dummy10s.yaml"
 endchoice
 endmenu
+
+menu "Set a string"
+	config SET_STRING
+	bool "Set value for a string"
+	default n
+	help
+		Set the machine that the SDK is built to be installed on.
+		Available options provided by OpenEmbedded-Core are: aarch64,
+		i586, i686, ppc64, ppc64le, and x86_64.
+
+	config STRING
+	depends on SET_STRING
+	string "STRING"
+	default "jay test"
+	help
+		Set the machine that the SDK is built to be installed on.
+		Available options provided by OpenEmbedded-Core are: aarch64,
+		i586, i686, ppc64, ppc64le, and x86_64.
+endmenu
