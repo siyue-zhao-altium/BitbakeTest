@@ -1,5 +1,9 @@
 mainmenu "Image Builder"
 
+config KAS_BUILD_SYSTEM
+	string
+	default "openembedded"
+
 menu "Selection"
 choice
 	prompt "Select the Image builder you want to use"
@@ -8,7 +12,7 @@ choice
 	config HELLO_WORLD
 	bool "Hello world takes 5 mins"
 
-	config KAS_INCLUDE_HELLOWORLD
+	config KAS_INCLUDE_HELLO_WORLD
 	string
 	depends on HELLO_WORLD
 	default "helloWorld5min.yaml"
