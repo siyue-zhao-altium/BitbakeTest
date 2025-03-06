@@ -18,8 +18,6 @@ repos:
     branch: mickledore
     layers:
       meta:
-      meta-poky:
-      meta-yocto-bsp:
 
   meta-test:
     layers:
