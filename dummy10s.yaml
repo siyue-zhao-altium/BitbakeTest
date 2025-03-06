@@ -12,12 +12,14 @@ repos:
     branch: "2.0"
     layers:
       .: excluded
-    
-  openembedded-core:
-    url: "https://git.openembedded.org/openembedded-core"
-    branch: kirkstone
+
+  poky:
+    url: "https://git.yoctoproject.org/poky"
+    branch: mickledore
     layers:
       meta:
+      meta-poky:
+      meta-yocto-bsp:
 
   meta-test:
     layers:
