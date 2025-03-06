@@ -30,13 +30,13 @@ endmenu
 
 config HELLO_MESSAGE
 string "SET HELLO_MESSAGE"
-default "Hello World from Jay 001"
+default "Hello World from Jay Kconfig"
 help
 	Set the HELLO_MESSAGE: Anything.
 
 
 config BB_NUMBER_THREADS
 string "SET BB_NUMBER_THREADS"
-default "4"
+default "8"
 help
 	Set the BB_NUMBER_THREADS: 4, 8.
