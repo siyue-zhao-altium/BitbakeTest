@@ -16,8 +16,8 @@
 #
 if [ -n "$BASH_SOURCE" ]; then
     THIS_SCRIPT=$BASH_SOURCE
-elif [ -n "$ZSH_NAME" ]; then
-    THIS_SCRIPT=$0
+#elif [ -n "$ZSH_NAME" ]; then
+#    THIS_SCRIPT=$0
 else
     THIS_SCRIPT="$(pwd)/oe-init-build-env"
     if [ ! -e "$THIS_SCRIPT" ]; then
@@ -56,3 +56,4 @@ fi
 unset OEROOT
 
 [ -z "$BUILDDIR" ] || cd "$BUILDDIR"
+
