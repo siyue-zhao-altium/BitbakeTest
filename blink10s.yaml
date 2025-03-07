@@ -1,10 +1,8 @@
 header:
   version: 1
 
-machine: dummy-machine
-distro: dummy-distro
 target:
-  - helloworld
+  - blink
 
 repos:
   bitbake:
@@ -19,3 +17,4 @@ repos:
 
 local_conf_header:
   standard: |
+  
