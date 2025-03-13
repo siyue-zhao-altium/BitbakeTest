@@ -4,10 +4,10 @@ config KAS_BUILD_SYSTEM
 	string
 	default "openembedded"
 
-menu "Selection"
+menu "Select the Image to build"
 choice
 	prompt "Select the Image builder you want to use"
-	default HELLO_WORLD
+	default DUMMY_FAST
 
 	config HELLO_WORLD
 	bool "Hello world takes 5 mins"
@@ -23,20 +23,16 @@ choice
 	config KAS_INCLUDE_DUMMY_FAST
 	string
 	depends on DUMMY_FAST
-	default "dummy10s.yaml"
+	default "blink10s.yaml"
 endchoice
 endmenu
 
 
 config HELLO_MESSAGE
 string "SET HELLO_MESSAGE"
-default "Hello World from Jay Kconfig"
+default "Enter your message here"
 help
 	Set the HELLO_MESSAGE: Anything.
 
 
-config BB_NUMBER_THREADS
-string "SET BB_NUMBER_THREADS"
-default "8"
-help
-	Set the BB_NUMBER_THREADS: 4, 8.
+
