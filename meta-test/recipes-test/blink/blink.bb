@@ -1,16 +1,21 @@
 DESCRIPTION = "Hello World Blink Version"
 LICENSE = "CLOSED"
 
+inherit base
+
+addtask install before do_build
+
 do_install() {
-    install -d ${D}${bindir} 
-    echo "${HELLO_MESSAGE}" > ${D}${bindir}/blink.txt
+    echo "Hello World Message: "+${HELLO_MESSAGE} > ${WORKDIR}/blink.txt
 }
 
 FILES_${PN} += "${bindir}/blink.txt"
 
-inherit deploy
+addtask deploy after do_install before do_build
+
+DEPLOYDIR = "${TOPDIR}/tmp/deploy"
 
 do_deploy() {
-    install -D ${D}${bindir}/blink.txt ${DEPLOYDIR}/blink.txt
+    install -D ${WORKDIR}/blink.txt ${DEPLOYDIR}/blink.txt
 }
 
