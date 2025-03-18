@@ -6,7 +6,7 @@ inherit base
 addtask install before do_build
 
 do_install() {
-    echo "Hello World Message: "+${HELLO_MESSAGE} > ${WORKDIR}/blink.txt
+    echo "Hello World Message: ${HELLO_MESSAGE}" > ${WORKDIR}/blink.txt
 }
 
 FILES_${PN} += "${bindir}/blink.txt"
