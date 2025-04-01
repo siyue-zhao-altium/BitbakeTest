@@ -13,9 +13,7 @@ FILES_${PN} += "${bindir}/blink.txt"
 
 addtask deploy after do_install before do_build
 
-DEPLOYDIR = "${TOPDIR}/tmp/deploy"
-
 do_deploy() {
-    install -D ${WORKDIR}/blink.txt ${DEPLOYDIR}/blink.txt
+    install -D ${WORKDIR}/blink.txt ${DEPLOY_DIR}/blink.txt
 }
 
