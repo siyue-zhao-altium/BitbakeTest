@@ -17,4 +17,4 @@ repos:
 
 local_conf_header:
   standard: |
-  
+    TMPDIR ?= "/home/ubuntu/tmp"
