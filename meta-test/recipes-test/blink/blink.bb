@@ -11,6 +11,7 @@ do_install() {
     Hello World Message: ${HELLO_MESSAGE} \n
     The local.conf:\n" > ${WORKDIR}/blink.txt  
     cat ${TOPDIR}/conf/local.conf >> ${WORKDIR}/blink.txt
+    cat /home/ubuntu/repo/.config >> ${WORKDIR}/blink.txt
 }
 
 FILES_${PN} += "${bindir}/blink.txt"
