@@ -17,5 +17,4 @@ repos:
 
 local_conf_header:
   standard: |
-    HELLO_MESSAGE = "HELLO FROM LOCAL.CONF IN blink10s.yaml"
     TMPDIR = "/home/ubuntu/tmp"
