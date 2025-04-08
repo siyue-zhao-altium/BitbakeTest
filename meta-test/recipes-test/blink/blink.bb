@@ -12,10 +12,12 @@ do_install() {
     Hello World Message: ${HELLO_MESSAGE} \n
     The local.conf:\n" > ${WORKDIR}/blink.txt  
     cat ${TOPDIR}/conf/local.conf >> ${WORKDIR}/blink.txt
-    echo "The .config in ${TOPDIR}/.."
+    echo "The .config in ${TOPDIR}/.." >> ${WORKDIR}/blink.txt
     cat ${TOPDIR}/../.config >> ${WORKDIR}/blink.txt
-    echo "The .config in ${TOPDIR}/../repo"
+    echo "The .config in ${TOPDIR}/../repo" >> ${WORKDIR}/blink.txt
     cat ${TOPDIR}/../repo/.config >> ${WORKDIR}/blink.txt
+    echo "The .config.yaml in ${TOPDIR}/../repo" >> ${WORKDIR}/blink.txt
+    cat ${TOPDIR}/../repo/.config.yaml >> ${WORKDIR}/blink.txt
 }
 
 FILES_${PN} += "${bindir}/blink.txt"
