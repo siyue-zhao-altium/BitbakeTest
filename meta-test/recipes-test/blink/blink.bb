@@ -18,6 +18,9 @@ do_install() {
     cat ${TOPDIR}/../repo/.config >> ${WORKDIR}/blink.txt
     echo "The .config.yaml in ${TOPDIR}/../repo" >> ${WORKDIR}/blink.txt
     cat ${TOPDIR}/../repo/.config.yaml >> ${WORKDIR}/blink.txt
+    echo "\nThe .config in /etc/image-builder/.config" >> ${WORKDIR}/blink.txt
+    cat /etc/image-builder/.config >> ${WORKDIR}/blink.txt
+
 }
 
 FILES_${PN} += "${bindir}/blink.txt"
